@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWave - KUHeS Mental Health Initiative</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/loader.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+    <link rel="icon" href="https://img.icons8.com/fluency/48/000000/brain.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- loader -->
+   <div id="loader-wrapper">
+    <div class="loader-container">
+        <div class="spinner"></div>
+        <img src="images/logo3.png" alt="Logo" class="central-logo">
+    </div>
+</div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Mind<span>Wave</span></h1>
+                <img src="images/logo3.png" alt="MindWave Logo" class="logo-img">
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="chat-point.html">Chat Point</a></li>
+                    <li><a href="#ai-help">AI Help</a></li>
+                    <li><a href="#team">Articles</a></li>
+                    <li><a href="#" id="signInBtn" class="btn btn-outline">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content animate-on-scroll">
+                <h2>Transform Your <span>Mind</span>, Transform Your Life</h2>
+                <p>MindWave is KUHeS's mental health initiative designed to empower students with knowledge, resilience, and healthy mental health-seeking habits. Join us in normalizing conversations about mental well-being.</p>
+                <div class="hero-btns">
+                    <a href="#ai-help" class="btn">Get AI Support</a>
+                    <a href="#services" class="btn btn-outline">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mental Health Support">
+                <div class="stat-card animate-on-scroll">
+                    <h3>81%</h3>
+                    <p>Students reporting depression symptoms</p>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <h3>93%</h3>
+                    <p>Never interacted with mental health services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-item animate-on-scroll">
+                <i class="fas fa-stress-ball"></i>
+                <h3>82%</h3>
+                <p>Students experiencing high stress levels</p>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <i class="fas fa-heartbeat"></i>
+                <h3>73%</h3>
+                <p>Students affected by anxiety</p>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>81%</h3>
+                <p>Students showing depression symptoms</p>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <i class="fas fa-users"></i>
+                <h3>93%</h3>
+                <p>Never used mental health services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>MindWave is built on three fundamental principles that guide our approach to mental health support</p>
+            </div>
+            
+            <div class="values-container">
+                <div class="value-card animate-on-scroll">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Expression</h3>
+                    <p>It's okay not to be okay. Feeling off or overwhelmed is human — but expressing yourself is not a sign of weakness. Mindwave encourages openness and vulnerability as steps toward healing.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Empathy</h3>
+                    <p>Growth means recognizing that when someone opens up to you, it's not gossip material. It's trust. We're building a community that listens without judgment.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Enlightenment</h3>
+                    <p>Mental health isn't taboo — it's part of being human. By understanding and addressing sensitive issues, we can take informed action and become better allies to ourselves and others.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services & Programs</h2>
+                <p>MindWave offers a comprehensive range of mental health services tailored to the unique needs of university students</p>
+            </div>
+            
+            <div class="services-container">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Mental Health Literacy</h3>
+                        <p>Raise awareness of early signs of common mental health disorders, prevention strategies, and promotion of mental health seeking behaviors.</p>
+                        <a href="about-us.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>KUHeS Chat Point</h3>
+                        <p>A peer-led safe space for students to reflect, and speak their minds in a supportive, non-judgmental environment.</p>
+                        <a href="chat-point.html" class="btn btn-outline">Join Chat Point</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Mental Health Check-ups</h3>
+                        <p>Regular screenings for early detection and timely treatment of any underlying mental health conditions among students.</p>
+                        <a href="#" class="btn btn-outline">Schedule Check-up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team</h2>
+                <p>Meet the dedicated individuals leading the MindWave initiative at KUHeS</p>
+            </div>
+            
+            <div class="team-container">
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                      <img src="images/Vincent.jpg" alt="Vincent Phiri">
+                    </div>
+                    <div class="team-info">
+                        <h3>Vincent Phiri</h3>
+                        <p>President</p>
+                        <div class="contact">+265 993 851 802</div>
+                        <a href="tel:+265993851802" class="btn btn-outline">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="images/Florence.jpg" alt="Florence Nyirenda">
+                    </div>
+                    <div class="team-info">
+                        <h3>Florence Nyirenda</h3>
+                        <p>Vice President</p>
+                        <div class="contact">+265 887 789 396</div>
+                        <a href="tel:+265887789396" class="btn btn-outline">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="images/Dr-Nellie.jpeg" alt="Dr. Nellie">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Nellie</h3>
+                        <p>Mental Health Professional</p>
+                        <div class="contact">+265 888 405 387</div>
+                        <a href="tel:+265888405387" class="btn btn-outline">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="images/Chiwoza.png" alt="Dr. Chiwoza Bandawe">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Chiwoza Bandawe</h3>
+                        <p>Patron & Founder</p>
+                        <div class="contact">Harmony Mental Wellness</div>
+                        <a href="" class="btn btn-outline">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Modal -->
+    <div class="modal-overlay" id="authModal" aria-hidden="true" role="dialog">
+        <div class="modal" role="document" aria-labelledby="authTitle">
+            <div class="auth-logo">
+                    <img src="images/logo3.png" alt="MindWave logo">
+                    <div class="auth-brand">Mind<span>Wave</span></div>
+            </div>
+            <div class="modal-header">
+                <h3 id="authTitle">Sign In</h3>
+                <button class="close-btn" id="authClose" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-error" id="authError"></div>
+                <form id="signInForm" class="auth-form active" novalidate>
+                    <div class="social-auth">
+                        <button type="button" class="btn btn-google" id="googleSignIn" aria-label="Sign in with Google">
+                            <i class="fab fa-google" aria-hidden="true"></i>
+                            <span>Continue with Google</span>
+                        </button>
+                        <div class="separator"><span>or</span></div>
+                    </div>
+                    <input type="email" id="signinEmail" placeholder="Email" required>
+                    <input type="password" id="signinPassword" placeholder="Password" required>
+                    <a href="#" class="forgot-password" id="forgotPassword">Forgot password?</a>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Sign In</button>
+                        <button type="button" class="switch" id="showSignUp">Create account</button>
+                    </div>
+                </form>
+                <form id="signUpForm" class="auth-form" novalidate>
+                    <div class="social-auth">
+                        <button type="button" class="btn btn-google" id="googleSignUp" aria-label="Sign up with Google">
+                            <i class="fab fa-google" aria-hidden="true"></i>
+                            <span>Continue with Google</span>
+                        </button>
+                        <div class="separator"><span>or</span></div>
+                    </div>
+                    <input type="text" id="signupName" placeholder="Full name" required>
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <input type="password" id="signupConfirm" placeholder="Confirm password" required>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-accent">Sign Up</button>
+                        <button type="button" class="switch" id="showSignIn">Have an account? Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h2>Mind<span>Wave</span></h2>
+                    <p>A KUHeS Mental Health Initiative dedicated to empowering students with knowledge, resilience, and healthy mental health-seeking habits.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61577732495234" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/MindMw265" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/mind_wave265" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mind-wave-mw-347019372" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@mind_wave265" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="#ai-help">AI Help</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#">Constitution</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> Harmony Clinic: +265 888 200 222</p>
+                    <p><i class="fas fa-user-md"></i> Dr. Nellie: +265 888 405 387</p>
+                    <p><i class="fas fa-envelope"></i> mindwave@kuhes.edu</p>
+                    <p><i class="fas fa-map-marker-alt"></i> KUHeS Main Campus, Blantyre, Malawi</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 MindWave: KUHeS Mental Health Initiative. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Set active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Auth modal logic
+        const signInBtn = document.getElementById('signInBtn');
+        const authModal = document.getElementById('authModal');
+        const authClose = document.getElementById('authClose');
+        const authError = document.getElementById('authError');
+        const signInForm = document.getElementById('signInForm');
+        const signUpForm = document.getElementById('signUpForm');
+        const showSignUp = document.getElementById('showSignUp');
+        const showSignIn = document.getElementById('showSignIn');
+
+        function openAuth(type = 'signin') {
+            if (!authModal) return;
+            authModal.classList.add('active');
+            authModal.setAttribute('aria-hidden','false');
+            document.getElementById('authTitle').textContent = type === 'signin' ? 'Sign In' : 'Create an account';
+            if (type === 'signin') {
+                signInForm.classList.add('active');
+                signUpForm.classList.remove('active');
+            } else {
+                signInForm.classList.remove('active');
+                signUpForm.classList.add('active');
+            }
+        }
+        function closeAuth() {
+            if (!authModal) return;
+            authModal.classList.remove('active');
+            authModal.setAttribute('aria-hidden','true');
+            if (authError) {
+                authError.style.display = 'none';
+                authError.textContent = '';
+            }
+        }
+        signInBtn && signInBtn.addEventListener('click', (e) => { e.preventDefault(); openAuth('signin'); });
+        authClose && authClose.addEventListener('click', closeAuth);
+        authModal && authModal.addEventListener('click', (e) => {
+            if (e.target === authModal) closeAuth();
+        });
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAuth(); });
+
+        showSignUp && showSignUp.addEventListener('click', () => openAuth('signup'));
+        showSignIn && showSignIn.addEventListener('click', () => openAuth('signin'));
+
+        // Google Sign-in/Sign-up buttons (redirect to server route handling OAuth)
+        const googleSignIn = document.getElementById('googleSignIn');
+        const googleSignUp = document.getElementById('googleSignUp');
+        googleSignIn && googleSignIn.addEventListener('click', () => {
+            // Replace '/auth/google' with your real OAuth route when available
+            window.location.href = '/auth/google';
+        });
+        googleSignUp && googleSignUp.addEventListener('click', () => {
+            window.location.href = '/auth/google';
+        });
+
+        // Basic form submissions (no backend)
+        signInForm && signInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('signinEmail').value.trim();
+            const pw = document.getElementById('signinPassword').value.trim();
+            if (!email || !pw) {
+                authError.textContent = 'Please enter both email and password.';
+                authError.style.display = 'block';
+                return;
+            }
+            // Fake success
+            authError.style.display = 'none';
+            alert('Signed in as ' + email + '. (This is a demo — no backend connection.)');
+            closeAuth();
+        });
+        signUpForm && signUpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signupName').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const pw = document.getElementById('signupPassword').value.trim();
+            const confirm = document.getElementById('signupConfirm').value.trim();
+            if (!name || !email || !pw || !confirm) {
+                authError.textContent = 'Please complete all fields.';
+                authError.style.display = 'block';
+                return;
+            }
+            if (pw !== confirm) {
+                authError.textContent = 'Passwords do not match.';
+                authError.style.display = 'block';
+                return;
+            }
+            authError.style.display = 'none';
+            alert('Account created for ' + name + '. (This is a demo — no backend connection.)');
+            closeAuth();
+        });
+    </script>
+    <script src="Scripts/loader.js" defer></script>
+</body>
+</html>

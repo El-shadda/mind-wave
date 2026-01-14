@@ -1,0 +1,58 @@
+/* Shared loader styles for MindWave site */
+/* Customizable via CSS variables on #loader-wrapper or :root */
+#loader-wrapper {
+  --loader-size: 160px; /* overall ring size */
+  --loader-color: #0056b3; /* default ring color */
+  --loader-duration: 0.9s; /* rotation speed */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+.loader-container {
+  position: relative;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The spinning ring */
+.spinner {
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgba(0, 0, 0, 0.06);
+  border-top: 5px solid var(--loader-color);
+  border-radius: 50%;
+  position: absolute;
+  animation: spin var(--loader-duration) linear infinite;
+}
+
+/* The Logo */
+.central-logo {
+  width: calc(var(--loader-size) * 0.56); /* proportionally smaller */
+  height: auto;
+  z-index: 10;
+}
+
+/* Rotation Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade out class */
+.loader-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
