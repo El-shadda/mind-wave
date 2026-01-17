@@ -6,18 +6,30 @@
     <title>KUHeS Chat Point | MindWave - Peer Support Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/chat-point.css">
     <link rel="stylesheet" href="Styles/loader.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <link rel="icon" href="https://img.icons8.com/fluency/48/000000/brain.png" type="image/png">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/000000/brain.png" type="image/png">
+    <style>
+        /* Minimal styles to center the message */
+        .coming-soon-wrapper {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .coming-soon-wrapper h1 {
+            font-size: 2.25rem;
+            margin: 0 0 0.5rem;
+        }
+        .coming-soon-wrapper p {
+            font-size: 1.25rem;
+            margin: 0;
+            color: #555;
+        }
+    </style>
 </head>
-
 <body>
     <div id="loader-wrapper">
         <div class="loader-container">
@@ -34,15 +46,15 @@
                 <img src="images/logo3.png" alt="MindWave Logo" class="logo-img">
             </div>
             
-            <div class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
+            <div class="mobile-toggle" id="mobileToggle" role="button" aria-controls="navLinks" aria-expanded="false" tabindex="0">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </div>
             
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="chat-point.html" class="active">Chat Point</a></li>
+                    <li><a href="chat-point.html" class="active" aria-current="page">Chat Point</a></li>
                     <li><a href="../ai-help.html">AI Help</a></li>
                     <li><a href="../articles-html">Articles</a></li>
                     <li><a href="#" id="signInBtn" class="btn btn-outline">Sign In</a></li>
@@ -50,177 +62,16 @@
             </nav>
         </div>
     </header>
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            });
-        }
 
-        // Chat Modal Functionality
-        const chatModal = document.getElementById('chatModal');
-        const findTherapistBtn = document.getElementById('findTherapistBtn');
-        const chatWithPeerBtn = document.getElementById('chatWithPeer');
-        const closeChatBtn = document.getElementById('closeChat');
-        const anonChatBtn = document.getElementById('anonChatBtn');
+    <main>
+        <section class="coming-soon-wrapper" aria-live="polite">
+            <div>
+                <h1>Work in progress</h1>
+                <p>Coming Soon</p>
+            </div>
+        </section>
+    </main>
 
-        function openChatModal() {
-            if (chatModal) {
-                chatModal.classList.add('active');
-            }
-        }
-
-        function closeChatModal() {
-            if (chatModal) {
-                chatModal.classList.remove('active');
-            }
-        }
-
-        if (findTherapistBtn) {
-            findTherapistBtn.addEventListener('click', openChatModal);
-        }
-
-        if (chatWithPeerBtn) {
-            chatWithPeerBtn.addEventListener('click', openChatModal);
-        }
-
-        if (anonChatBtn) {
-            anonChatBtn.addEventListener('click', openChatModal);
-        }
-
-        if (closeChatBtn) {
-            closeChatBtn.addEventListener('click', closeChatModal);
-        }
-
-        if (chatModal) {
-            chatModal.addEventListener('click', (e) => {
-                if (e.target === chatModal) {
-                    closeChatModal();
-                }
-            });
-        }
-
-        // New Post Button
-        const newPostBtn = document.getElementById('newPostBtn');
-        const newPostForm = document.getElementById('newPostForm');
-
-        if (newPostBtn && newPostForm) {
-            newPostBtn.addEventListener('click', () => {
-                newPostForm.scrollIntoView({ behavior: 'smooth' });
-                newPostForm.querySelector('textarea').focus();
-            });
-        }
-
-        // Crisis Button
-        const crisisBtn = document.getElementById('crisisBtn');
-        if (crisisBtn) {
-            crisisBtn.addEventListener('click', () => {
-                alert('🆘 Crisis Support Activated\n\nPlease call:\n• National Suicide Prevention: 988\n• Harmony Clinic: +265 888 200 222\n• Dr. Nellie: +265 888 405 387\n\nYou are not alone. Help is available 24/7.');
-            });
-        }
-
-        // Join Discussion Button
-        const joinDiscussionBtn = document.getElementById('joinDiscussion');
-        if (joinDiscussionBtn) {
-            joinDiscussionBtn.addEventListener('click', () => {
-                document.querySelector('.new-post-card').scrollIntoView({ behavior: 'smooth' });
-                document.querySelector('.new-post-card textarea').focus();
-            });
-        }
-
-        // Like/Comment Functionality
-        document.querySelectorAll('.stat-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (this.querySelector('.fa-heart')) {
-                    const icon = this.querySelector('i');
-                    if (icon.classList.contains('far')) {
-                        icon.classList.remove('far');
-                        icon.classList.add('fas');
-                        const count = parseInt(this.textContent.match(/\d+/)[0]) + 1;
-                        this.innerHTML = `<i class="fas fa-heart"></i> ${count}`;
-                    }
-                }
-            });
-        });
-
-        // Comment Functionality
-        document.querySelectorAll('.add-comment button').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const input = this.previousElementSibling;
-                const comment = input.value.trim();
-                if (comment) {
-                    const commentsSection = this.closest('.comments-section') || this.closest('.discussion-post').querySelector('.comments-section');
-                    if (!commentsSection) {
-                        const newCommentsSection = document.createElement('div');
-                        newCommentsSection.className = 'comments-section';
-                        newCommentsSection.innerHTML = `
-                            <div class="comment">
-                                <div class="comment-avatar">
-                                    <i class="fas fa-user-circle"></i>
-                                </div>
-                                <div class="comment-content">
-                                    <div class="comment-header">
-                                        <span class="comment-author">You</span>
-                                        <span class="comment-time">Just now</span>
-                                    </div>
-                                    <p>${comment}</p>
-                                </div>
-                            </div>
-                            <div class="add-comment">
-                                <input type="text" placeholder="Add a comment...">
-                                <button class="btn btn-small">Post</button>
-                            </div>
-                        `;
-                        this.closest('.discussion-post').appendChild(newCommentsSection);
-                    } else {
-                        const newComment = document.createElement('div');
-                        newComment.className = 'comment';
-                        newComment.innerHTML = `
-                            <div class="comment-avatar">
-                                <i class="fas fa-user-circle"></i>
-                            </div>
-                            <div class="comment-content">
-                                <div class="comment-header">
-                                    <span class="comment-author">You</span>
-                                    <span class="comment-time">Just now</span>
-                                </div>
-                                <p>${comment}</p>
-                            </div>
-                        `;
-                        const addComment = commentsSection.querySelector('.add-comment');
-                        commentsSection.insertBefore(newComment, addComment);
-                    }
-                    input.value = '';
-                }
-            });
-        });
-
-        // Press Enter to post comment
-        document.querySelectorAll('.add-comment input').forEach(input => {
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    this.nextElementSibling.click();
-                }
-            });
-        });
-
-        // Sign In Button (from header)
-        const signInBtn = document.getElementById('signInBtn');
-        if (signInBtn) {
-            signInBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Sign In functionality would connect to your authentication system.\nFor now, you can post anonymously!');
-            });
-        }
-    </script>
     <script src="Scripts/loader.js" defer></script>
 </body>
-
 </html>
