@@ -465,6 +465,15 @@
             font-size: 4rem;
             color: var(--primary);
         }
+       
+         .team-img-n {
+            height: 250px;
+            overflow: hidden;
+            display: upper center;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
 
         .team-info {
             padding: 1.5rem;
