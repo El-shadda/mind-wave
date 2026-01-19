@@ -408,11 +408,14 @@
         }
 
         .service-icon {
-            background-color: var(--primary);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            font-size: 2.5rem;
+             height: 200px;
+            background-color: var(image, #ddd);
+            overflow: hidden;
+            display: upper center;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary);
         }
 
         .service-content {
@@ -734,5 +737,6 @@
 .separator span { padding:0 8px; }
 
         /* loader moved to Styles/loader.css */
+
 
        
